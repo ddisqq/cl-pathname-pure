@@ -6,14 +6,16 @@
 
 (asdf:defsystem #:cl-pathname-pure
   :description "Pure Common Lisp cross-platform pathname handling library"
-  :author "Parkian Company LLC"
+  :author "Park Ian Co"
   :license "Apache-2.0"
   :version "0.1.0"
   :serial t
   :components ((:file "package")
                (:module "src"
-                :serial t
-                :components ((:file "pathname")))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-pathname-pure" :depends-on ("package" "conditions" "types")))))))
 
 (asdf:defsystem #:cl-pathname-pure/test
   :description "Tests for cl-pathname-pure"

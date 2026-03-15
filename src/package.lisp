@@ -7,7 +7,9 @@
 (defpackage #:cl-pathname-pure
   (:use #:cl)
   (:export
-   ;; Path merging and manipulation
+   #:with-pathname-pure-timing
+   #:pathname-pure-batch-process
+   #:pathname-pure-health-check;; Path merging and manipulation
    #:merge-pathnames*
    #:pathname-parent
    #:ensure-directory-pathname
