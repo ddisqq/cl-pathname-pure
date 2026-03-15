@@ -7,7 +7,11 @@
 (defpackage #:cl-pathname-pure
   (:use #:cl)
   (:export
-   #:with-pathname-pure-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-pathname-pure-timing
    #:pathname-pure-batch-process
    #:pathname-pure-health-check;; Path merging and manipulation
    #:merge-pathnames*
